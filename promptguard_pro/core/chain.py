@@ -4,16 +4,16 @@ import time
 from typing import Optional, List, Union, Dict, Any, AsyncIterator, Type, Callable, Literal
 from pydantic import BaseModel
 
-from promptguard.core.response import PromptResult, StreamChunk, ExecutionMetadata
-from promptguard.core.executor import PromptExecutor
-from promptguard.core.models import get_model_info
-from promptguard.providers import get_provider
-from promptguard.validation.semantic import Validator
-from promptguard.validation.schema import SchemaValidator
-from promptguard.caching.base import CacheBackend, generate_cache_key
-from promptguard.retry.strategies import RetryStrategy, ExponentialBackoff
-from promptguard.exceptions import PromptExecutionError, ValidationError, InvalidConfigurationError
-from promptguard.core.response import LogLevel
+from promptguard_pro.core.response import PromptResult, StreamChunk, ExecutionMetadata
+from promptguard_pro.core.executor import PromptExecutor
+from promptguard_pro.core.models import get_model_info
+from promptguard_pro.providers import get_provider
+from promptguard_pro.validation.semantic import Validator
+from promptguard_pro.validation.schema import SchemaValidator
+from promptguard_pro.caching.base import CacheBackend, generate_cache_key
+from promptguard_pro.retry.strategies import RetryStrategy, ExponentialBackoff
+from promptguard_pro.exceptions import PromptExecutionError, ValidationError, InvalidConfigurationError
+from promptguard_pro.core.response import LogLevel
 
 
 class PromptChain:
@@ -85,7 +85,7 @@ class PromptChain:
             else:
                 self.retry_strategy = ExponentialBackoff(max_retries=max_retries)
         else:
-            from promptguard.retry.strategies import ConstantDelay
+            from promptguard_pro.retry.strategies import ConstantDelay
             self.retry_strategy = ConstantDelay(delay=retry_delay, max_retries=max_retries)
         
         # Initialize schema validator

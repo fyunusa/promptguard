@@ -1,14 +1,14 @@
 """PromptGuard - Production-ready framework for reliable LLM orchestration."""
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 __author__ = "PromptGuard Team"
 __license__ = "MIT"
 
-from promptguard.core.chain import PromptChain
-from promptguard.core.response import PromptResult, ExecutionMetadata, StreamChunk, LogLevel
-from promptguard.caching.base import CacheBackend
-from promptguard.validation import semantic as validators
-from promptguard.retry.strategies import (
+from promptguard_pro.core.chain import PromptChain
+from promptguard_pro.core.response import PromptResult, ExecutionMetadata, StreamChunk, LogLevel
+from promptguard_pro.caching.base import CacheBackend
+from promptguard_pro.validation import semantic as validators
+from promptguard_pro.retry.strategies import (
     RetryStrategy,
     ExponentialBackoff,
     FibonacciBackoff,
@@ -16,7 +16,7 @@ from promptguard.retry.strategies import (
     ConstantDelay,
     CustomRetryStrategy,
 )
-from promptguard.exceptions import (
+from promptguard_pro.exceptions import (
     PromptGuardError,
     PromptExecutionError,
     ValidationError,

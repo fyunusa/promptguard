@@ -4,11 +4,11 @@ import time
 from typing import Optional, List, Union, Dict, Any
 from datetime import datetime
 
-from promptguard.core.response import PromptResult, ExecutionMetadata
-from promptguard.exceptions import PromptExecutionError, ValidationError, RateLimitError
-from promptguard.providers.base import BaseProvider
-from promptguard.retry.strategies import RetryStrategy, ExponentialBackoff
-from promptguard.caching.base import CacheBackend
+from promptguard_pro.core.response import PromptResult, ExecutionMetadata
+from promptguard_pro.exceptions import PromptExecutionError, ValidationError, RateLimitError
+from promptguard_pro.providers.base import BaseProvider
+from promptguard_pro.retry.strategies import RetryStrategy, ExponentialBackoff
+from promptguard_pro.caching.base import CacheBackend
 
 
 class PromptExecutor:

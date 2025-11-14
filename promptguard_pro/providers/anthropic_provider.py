@@ -2,9 +2,9 @@
 import os
 from typing import Any, AsyncIterator, List, Optional, Dict
 
-from promptguard.providers.base import BaseProvider
-from promptguard.exceptions import ProviderError, RateLimitError
-from promptguard.core.models import get_model_info, MODEL_REGISTRY
+from promptguard_pro.providers.base import BaseProvider
+from promptguard_pro.exceptions import ProviderError, RateLimitError
+from promptguard_pro.core.models import get_model_info, MODEL_REGISTRY
 
 
 class AnthropicProvider(BaseProvider):

@@ -1,7 +1,7 @@
 """In-memory cache backend."""
 import time
 from typing import Optional, Dict, Any
-from promptguard.caching.base import CacheBackend
+from promptguard_pro.caching.base import CacheBackend
 
 
 class MemoryCacheBackend(CacheBackend):

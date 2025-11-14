@@ -48,19 +48,19 @@ class CacheBackend(ABC):
     @staticmethod
     def memory() -> "MemoryCacheBackend":
         """Create in-memory cache."""
-        from promptguard.caching.memory import MemoryCacheBackend
+        from promptguard_pro.caching.memory import MemoryCacheBackend
         return MemoryCacheBackend()
     
     @staticmethod
     def redis(url: str = "redis://localhost:6379") -> "RedisCacheBackend":
         """Create Redis cache backend."""
-        from promptguard.caching.redis import RedisCacheBackend
+        from promptguard_pro.caching.redis import RedisCacheBackend
         return RedisCacheBackend(url)
     
     @staticmethod
     def disk(path: str = ".promptguard_cache") -> "DiskCacheBackend":
         """Create disk-based cache."""
-        from promptguard.caching.disk import DiskCacheBackend
+        from promptguard_pro.caching.disk import DiskCacheBackend
         return DiskCacheBackend(path)
 
 

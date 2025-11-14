@@ -2,8 +2,8 @@
 import os
 from typing import Any, AsyncIterator, List, Optional
 
-from promptguard.providers.base import BaseProvider
-from promptguard.exceptions import ProviderError, RateLimitError
+from promptguard_pro.providers.base import BaseProvider
+from promptguard_pro.exceptions import ProviderError, RateLimitError
 
 
 class GroqProvider(BaseProvider):

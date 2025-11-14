@@ -1,8 +1,8 @@
 """Redis cache backend."""
 from typing import Optional
 import json
-from promptguard.caching.base import CacheBackend
-from promptguard.exceptions import CacheError
+from promptguard_pro.caching.base import CacheBackend
+from promptguard_pro.exceptions import CacheError
 
 
 class RedisCacheBackend(CacheBackend):

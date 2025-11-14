@@ -1,13 +1,13 @@
 """Provider factory for PromptGuard."""
 from typing import Optional, Type, Dict
 
-from promptguard.providers.base import BaseProvider
-from promptguard.providers.anthropic_provider import AnthropicProvider
-from promptguard.providers.openai_provider import OpenAIProvider
-from promptguard.providers.groq_provider import GroqProvider
-from promptguard.providers.cohere_provider import CohereProvider
-from promptguard.providers.google_provider import GoogleProvider
-from promptguard.exceptions import ModelNotFoundError
+from promptguard_pro.providers.base import BaseProvider
+from promptguard_pro.providers.anthropic_provider import AnthropicProvider
+from promptguard_pro.providers.openai_provider import OpenAIProvider
+from promptguard_pro.providers.groq_provider import GroqProvider
+from promptguard_pro.providers.cohere_provider import CohereProvider
+from promptguard_pro.providers.google_provider import GoogleProvider
+from promptguard_pro.exceptions import ModelNotFoundError
 
 
 PROVIDER_MAP: Dict[str, Type[BaseProvider]] = {

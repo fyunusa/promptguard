@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "promptguard-pro"
-version = "0.1.1"
+version = "0.1.2"
 description = "Production-ready framework for reliable LLM orchestration"
 authors = ["PromptGuard Team <team@promptguard.dev>"]
 license = "MIT"
