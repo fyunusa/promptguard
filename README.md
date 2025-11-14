@@ -26,7 +26,7 @@ Every AI engineer writes the same boilerplate:
 
 ### 1. Smart Execution with Auto-Retry & Fallbacks
 ```python
-from promptguard import PromptChain
+from promptguard_pro import PromptChain
 
 chain = PromptChain(
     models=["anthropic/claude-3-5-sonnet", "openai/gpt-4o", "groq/llama-70b"],
@@ -42,7 +42,7 @@ print(result.response)  # Guaranteed to succeed or raise clear error
 ### 2. Type-Safe Response Validation
 ```python
 from pydantic import BaseModel, Field
-from promptguard import PromptChain
+from promptguard_pro import PromptChain
 
 class EvaluationResponse(BaseModel):
     evaluation: str = Field(description="Overall evaluation")
@@ -84,7 +84,7 @@ print(result.metadata.execution_time_ms)
 
 ### 5. Response Caching
 ```python
-from promptguard import CacheBackend
+from promptguard_pro import CacheBackend
 
 chain = PromptChain(
     models=["anthropic/claude-3-5-sonnet"],
@@ -99,7 +99,7 @@ assert result2.metadata.cached == True
 
 ### 6. Semantic Response Validation
 ```python
-from promptguard import validators
+from promptguard_pro import validators
 
 chain = PromptChain(
     models=["anthropic/claude-3-5-sonnet"],
@@ -137,15 +137,15 @@ results = await chain.batch_execute(
 
 ```bash
 # Basic installation
-pip install promptguard
+pip install promptguard-pro
 
 # With all features
-pip install promptguard[all]
+pip install promptguard-pro[all]
 
 # With specific features
-pip install promptguard[cache]      # Redis caching
-pip install promptguard[validation]  # Semantic validators
-pip install promptguard[metrics]     # Prometheus metrics
+pip install promptguard-pro[cache]      # Redis caching
+pip install promptguard-pro[validation]  # Semantic validators
+pip install promptguard-pro[metrics]     # Prometheus metrics
 ```
 
 ---
@@ -154,7 +154,7 @@ pip install promptguard[metrics]     # Prometheus metrics
 
 ```python
 import asyncio
-from promptguard import PromptChain, validators, CacheBackend
+from promptguard_pro import PromptChain, validators, CacheBackend
 from pydantic import BaseModel
 
 class Analysis(BaseModel):
